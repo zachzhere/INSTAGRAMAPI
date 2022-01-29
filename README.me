@@ -1,0 +1,54 @@
+-------------------------------------IMPORTANT INSTALL INFORMATION HERE------------------------------------
+
+1.)You will find an example Config file located within the project
+    a.)Here you will need to enter variables unique to your API such as
+        i.)ACCESS_TOKEN,CLIENT_ID etc...
+        ii.)These type of identifiers are located under the category [API]
+    b.)Also in the config file is your MongoDB information
+        i.)This will be under the category [config]
+        ii.)You will want to add the collection and db where you will host the video urls
+
+2.)To get access to the API you will first want to enter your ACCESS_TOKEN, CLIENT_ID and CLIENT_SECRET
+
+3.)Then run the get_user_pages.py script, you will get a sample output like below ---
+
+---- FACEBOOK PAGE INFO ----
+
+Page Name:
+[PAGE NAME HERE]
+
+Page Category:
+[CATEGORY HERE]
+
+Page Id:
+144570642177596
+
+    i.)You will want to then add the number printed under pageID as your PAGE_ID in the config file
+
+4.)Then run your get_instagram_account.py script, you will get a sample output like below ---
+
+---- INSTAGRAM ACCOUNT INFO ----
+
+Page Id:
+144570642177596
+
+Instagram Business Account Id:
+14846451614869006
+
+    i.)You will want to then add the number printed under Instagram Business Account Id: as your INSTAGRAM_ACCOUNT_ID in the config file
+
+5.)Make sure you update the MongoDB information in the config file from your mongoDB account - ALSO HAVE YOUR DATABASE THE SAME STRUCTURE, this is important as the script will not work if the sschema is different
+and example is outlined below
+
+_id:61ee422a1152fa1d0244b53b
+video_url:"https://justinstolpe.com/sandbox/ig_publish_content_vid.mp4"
+uploaded:false
+caption:"TEST 1"
+
+    i.)These video urls will need to be links to videos that are being publicly hosted somewhere
+
+6.)Make sure your config file is correctly named Config.ini
+
+Now You should be able to run the main.py script as a cronjob! Try one at first to verify before scheduling them. Each an entry is uploaded, the uploaded field in the database will be set to true.
+
+
