@@ -2,6 +2,7 @@ from defines import getCreds, makeApiCall
 
 
 def getLongLivedAccessToken(params):
+
     endpointParams = dict()
     endpointParams['grant_type'] = 'fb_exchange_token'
     endpointParams['client_id'] = params['client_id']
